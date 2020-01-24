@@ -6,24 +6,24 @@
 |password|string|null: false|
 |name|string|null: false|
 ### Association
-- has_many :through:users_groups
-- has_many :group through:users_groups
-- has_many :through:message
+- has_many :users_groups
+- has_many :groups、 through:users_groups
+- has_many :messages
 
 ## groupsテーブル
 |Column|Type|Options|
 |------|----|-------|
 |name|string|null: false, unique: true|
 ### Association
-- has_many :user_groups, through
-- has_many :messages, through
-- hah_many :user,through : user_groups
+- has_many :uses_groups
+- has_many :messages
+- hah_many :through : users_groups
 
 ## messagesテーブル
 |Column|Type|Options|
 |------|----|-------|
 |image|string|
-|text|text|null: false|
+|text|text|
 |user_id|integer|null: false, foreign_key: true|
 |group_id|integer|null: false, foreign_key: true|
 ### Association
