@@ -57,13 +57,11 @@ $('#new_message').on('submit', function(e){
     $('.messages').animate({scrollTop: $('.messages')[0].scrollHeight}, 'fast');         
     $('form')[0].reset();
     })
-    .fail(function(){
-      alert('error');
-    });
-    return false;
+  .fail(function(){
+    alert('error')
+    })
+  .always(function(){
+    $('.form__submit').prop('disabled',false);
   });
 });
-
-
-
-
+})
