@@ -52,7 +52,6 @@ $('#new_message').on('submit', function(e){
    contentType: false
  })
   .done(function(data){
-    console.log(data)
     var html = buildHTML(data);
     $('.messages').append(html);
     $('.messages').animate({scrollTop: $('.messages')[0].scrollHeight}, 'fast');         
@@ -74,7 +73,6 @@ var reloadMessages = function() {
     data: {id: last_message_id}
   })
   .done(function(messages) {
-    console.log(messages)
     if (messages.length !== 0) {
       var insertHTML = '';
       $.each(messages, function(i, message) {
