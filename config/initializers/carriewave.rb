@@ -14,5 +14,4 @@ CarrierWave.configure do |config|
 
   config.fog_directory  = 'smz1048'
   config.asset_host = 'https://s3-ap-northeast-1.amazonaws.com/smz1048'
-
 end
